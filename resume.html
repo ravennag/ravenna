@@ -9,6 +9,60 @@
     <title>Resume</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
+    h1 {
+        margin: 0;
+        font-size: 2.5em;
+    }
+    
+    p {
+        margin: 10px 0;
+    }
+    
+    .resume-section {
+        padding: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    h2 {
+        text-align: center;
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    
+    .resume-content {
+        padding: 20px;
+    }
+    
+    .resume-item {
+        margin-bottom: 20px;
+    }
+    
+    .resume-item h3 {
+        font-size: 1.5em;
+        border-bottom: 2px solid #168189;
+        padding-bottom: 10px;
+    }
+    
+    .job {
+        margin-bottom: 15px;
+    }
+    
+    .job h4 {
+        font-size: 1.2em;
+        margin-bottom: 5px;
+    }
+    
+    ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+    
+    @media (max-width: 600px) {
+        .resume-section {
+            padding: 10px;
+        }
+    }        
         .banner {
             display:flex;
             justify-content:center;
@@ -39,12 +93,6 @@
             .banner h1{
             font-size:10vw;
             }
-            footer{
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-
-        }
         }
         .resume-container {
             text-align: center;
@@ -56,7 +104,7 @@
             max-width: 500px;
             margin:10px;
         }
-        .download-button {
+        .responsive-button {
             display: inline-block;
             margin: 10px;
             padding: 10px 20px;
@@ -67,7 +115,7 @@
             font-size: 16px;
             transition: background-color 0.3s;
         }
-        .download-button:hover {
+        .responsive-button:hover {
             background-color: #0c5063;
         }
         .copyright{
@@ -90,12 +138,95 @@
       <div class="banner">
           <h1>RESUME</h1>
       </div>
-
-        <div class="resume-container">
-            <a class="download-button" target="_blank" href="Ravenna Gemignani Resume.pdf" download="Ravenna Gemignani Resume">Download PDF</a>
-            <div class="resume-pdf">
-                <img src="images/thumbnails/Ravenna Gemignani Resume-01.png" alt="Ravenna Gemignani Resume">
+      <section class="resume-section">
+        <div class="button-container">
+            <a href="Ravenna Gemignani Resume 9-4-24.pdf" class="button-link" target="_blank">
+                <button class="responsive-button">View PDF</button>
+            </a>
+        </div> 
+        <div class="resume-content">
+            <!-- Education -->
+            <div class="resume-item">
+                <h3>Education</h3>
+                <p><strong>The College of New Jersey (TCNJ)</strong> – Graduated May 2024</p>
+                <p>BA Interactive Multimedia, Spanish Minor</p>
+                <p>Summa Cum Laude, Commencement Speaker at Graduation, Dean’s List, Honors & Scholars Program, Member of Epsilon Pi Tau</p>
             </div>
+
+            <!-- Experience -->
+            <div class="resume-item">
+                <h3>Experience</h3>
+                <div class="job">
+                    <h4>Media Manager</h4>
+                    <p><strong>Louis & Sons Drywall, Inc. </strong><i>Long Branch, NJ</i> – Summers: July 2019 - Present</p>
+                    <ul>
+                        <li>Developed a website for the company using WordPress and CSS, enhancing online presence and accessibility, updating content regularly</li>
+                        <li>Produced conference videos and a commercial for sister company, Gemini Spray Foam Systems, achieving broadcast on Channel 3</li>
+                        <li>Led advertising campaigns on social media platforms such as Instagram + Facebook</li>
+                    </ul>
+                </div>
+                <div class="job">
+                    <h4>New Hope Interactive Sculpture AR Art Director</h4>
+                    <p><strong>New Hope Art Director</strong><i>New Hope, PA</i> – January 2024 - May 2024</p>
+                    <ul>
+                        <li>Created a cohesive theme and characters for the AR experience</li>
+                        <li>Animated AR experiences using After Effects and Hoverlay to enhance existing sculptures in New Hope under Prof. Chris Ault</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Leadership Positions -->
+            <div class="resume-item">
+                <h3>Leadership Positions</h3>
+                <div class="job">
+                    <h4>Learning Assistant IMM270 Digital Fabrication</h4>
+                    <p><strong>The College of New Jersey</strong><i>Ewing, NJ</i> – February 2024 - May 2024</p>
+                    <ul>
+                        <li>Guided students with various equipment in the Makerspace such as the Epilog laser cutters, Cricut Maker3, and Prusa 3D printers</li>
+                    </ul>
+                </div>
+                <div class="job">
+                    <h4>Secretary-Treasurer, Rebel Art Movement</h4>
+                    <p><strong>The College of New Jersey</strong><i>Ewing, NJ</i> – August 2023 - May 2024</p>
+                    <ul>
+                        <li>Allocated funds and led art-based activities on campus</li>
+                        <li>Organized Arter’s Market and created a space for local arts to sell their work</li>
+                    </ul>
+                </div>
+                <div class="job">
+                    <h4>DCT Student Representative</h4>
+                    <p><strong>The College of New Jersey</strong><i>Ewing, NJ</i> – August 2023 - May 2024</p>
+                    <ul>
+                        <li>Presented information about the Interactive Multimedia major to prospective 
+                            students and parents during Lions Day events, promoting program awareness and 
+                            recruitment efforts</li>
+                    </ul>
+                </div>
+                <div class="job">
+                    <h4>Learning Assistant SPA203</h4>
+                    <p><strong>The College of New Jersey</strong><i>Ewing, NJ</i> – August 2023 - May 2024</p>
+                    <ul>
+                        <li>Illustrated over 200 fully colored comic panels to be used as practice material for
+                            the SPA203  Spanish Immediate Oral Proficiency course at TCNJ</li>
+                        <li>Conducted weekly office hours and taught lessons as an Oral Proficiency Leader, 
+                            providing valuable academic support to students</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Skills -->
+            <div class="resume-item">
+                <h3>Skills</h3>
+                <ul>
+                    <li>Branding and Visual Design (Photoshop, Illustrator)</li>
+                    <li>3D Modeling (Blender, Maya)</li>
+                    <li>Web Design (HTML5, CSS, JavaScript, WordPress)</li>
+                    <li>Video Editing (Premiere Pro, iMovie, CapCut)</li>
+                    <li>Languages (Spanish: Conversational)</li>
+                </ul>
+            </div>
+
+
+        </div>
+    </section>
 
        <footer>
         <div class="footer-container">
