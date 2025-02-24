@@ -8,7 +8,7 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
     <title>Ravenna G | Logo Designs</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/smooth-zoom/dist/zoom.browser.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
     <style>
         .banner {
             display:flex;
@@ -81,8 +81,25 @@
     justify-content: center;
     align-items: center;
 }
-
-
+.masonry-gallery{
+        padding:0px;
+        width:60%;
+        margin-left:auto; 
+        margin-right:auto;
+    }
+.masonry-item{
+    width:60%;
+}
+.side-img{
+        width:40%;
+    }
+.other-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    border-radius: 10px; 
+}
 @media (max-width: 768px) {
     .banner{
         height:20vh;
@@ -90,7 +107,23 @@
     .text-wrapper h1{
             font-size: 2.7em;
     }
-
+      .side-img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        border-radius: 10px;
+        } 
+    .masonry-gallery{
+        padding:0px;
+        width:80%;
+    }
+    .masonry-item{
+        width:100%;
+    }
+    .other-img{
+        width:80%;
+    }
     .container {
         flex-direction: column;
         align-items: flex-start;
@@ -176,21 +209,38 @@ img {
         
             <br>
         </div>
-        <div class="image">
-            <img src="images/logodesign/smokinboatdeals-01.png" alt="Smokin Boat Deals" class="zoomable">
+        <div class="masonry-item">
+            <a data-fancybox="gallery" href="images/logodesign/smokinboatdeals-01.png">
+                <img src="images/logodesign/smokinboatdeals-01.png" alt="smokin">
+            </a>
         </div>
     </div>
     <br>
-    <div class="flexbin flexbin-margin">
-        <img class="zoomable" style="max-width: 20%;" src="images/logodesign/Smokin_1.jpg" alt="Logo variant 1" />
-        <img class="zoomable" style="max-width: 20%;" src="images/logodesign/Smokin_2.jpg" alt="Logo variant 2" />
-        <img class="zoomable" style="max-width: 20%;" src="images/logodesign/Smokin_3.jpg" alt="Logo variant 3" />
+    <div class="masonry-gallery">
+        <!-- Gallery Items -->
+        <div class="masonry-item">
+            <a data-fancybox="gallery" href="images/logodesign/Smokin_1.jpg">
+                <img src="images/logodesign/Smokin_1.jpg" alt="smokin 1">
+            </a>
         </div>
+        <div class="masonry-item">
+            <a data-fancybox="gallery" href="images/logodesign/Smokin_2.jpg">
+                <img src="images/logodesign/Smokin_2.jpg" alt="smokin 2">
+            </a>
+        </div>
+        <div class="masonry-item">
+            <a data-fancybox="gallery" href="images/logodesign/Smokin_3.jpg">
+                <img src="images/logodesign/Smokin_3.jpg" alt="smokin 3">
+            </a>
+        </div>
+    </div>
     
     <div class="container">
         
-        <div class="image">
-            <img src="images/graphicdesign/Logo_Thumbnail.jpg" alt="Metromaro logo" class="zoomable">
+        <div class="side-img">
+            <a data-fancybox="gallery" href="images/graphicdesign/Logo_Thumbnail.jpg">
+                <img src="images/graphicdesign/Logo_Thumbnail.jpg" alt="metromaro logo">
+            </a>
         </div>
         <div class="text" style="padding-left:5%;">
             <h2 style="text-align: center;">Metromaro</h2>
@@ -211,11 +261,13 @@ img {
 <br>
     <div class="process">
         <h1>Other Logo Designs</h1>
-        <div class="flexbin flexbin-margin">
-            <img class="zoomable" style="max-width: 25%;" src="images/logodesign/LogoDesigns-05.png" alt="Logo variants" />
-            </div>
+        <div class="other-img">
+            <a data-fancybox="gallery" href="images/logodesign/LogoDesigns-05.png">
+                <img src="images/logodesign/LogoDesigns-05.png" alt="other logo designs">
+            </a>
+        </div>
     </div>
-    
+    <br>
     <div class="button-container">
         <a href="graphicdesign.html" class="button-link">
             <button class="responsive-button">Back to GRAPHIC DESIGN</button>
@@ -237,8 +289,13 @@ img {
             </div>
         </div>
     </footer>
+    <!-- Fancybox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script>
-        Zoom(".zoomable");
-      </script>
+        // Initialize Fancybox
+        Fancybox.bind("[data-fancybox]", {
+            // Optional: Add custom settings here
+        });
+    </script>
 </body>
 </html>

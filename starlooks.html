@@ -8,7 +8,7 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
     <title>Ravenna G | Star Looks</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/smooth-zoom/dist/zoom.browser.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
     <style>
         .banner {
             display:flex;
@@ -220,18 +220,49 @@ img {
     <h1 style="text-align:center">FINAL DESIGNS</h1>
     <br>
 
-    <div class="flexbin flexbin-margin">
-      <!-- 			🔥 4. change the below hrefs from cssscript.com to your site or just eliminate them :) -->
-      <!-- 			🔥 5. add "zoomable" class to images -->
-      <img class="zoomable" src="images/starlooks/3.png" alt="Main sequence"/>
-      <img class="zoomable" src="images/starlooks/4.png" alt="Red Giant"/>
-      <img class="zoomable" src="images/starlooks/5.png" alt="Planetary Nebula"/>
-      <img class="zoomable" src="images/starlooks/6.png" alt="White Dwarf"/>
-      <img class="zoomable" src="images/starlooks/7.png" alt="Super Red Giant"/>
-      <img class="zoomable" src="images/starlooks/8.png" alt="Supernova"/>
-      <img class="zoomable" src="images/starlooks/9.png" alt="Neutron Star"/>
-      <img class="zoomable" src="images/starlooks/10.png" alt="Black Hole"/>
+    <div class="masonry-gallery">
+        <!-- Gallery Items -->
+        <div class="masonry-item">
+            <a data-fancybox="gallery" href="images/starlooks/3.png">
+                <img src="images/starlooks/3.png" alt="Main Sequence">
+            </a>
+        </div>
+        <div class="masonry-item">
+            <a data-fancybox="gallery" href="images/starlooks/4.png">
+                <img src="images/starlooks/4.png" alt="Red Giant">
+            </a>
+        </div>
+        <div class="masonry-item">
+            <a data-fancybox="gallery" href="images/starlooks/5.png">
+                <img src="images/starlooks/5.png" alt="Planetary Nebula">
+            </a>
+        </div>
+        <div class="masonry-item">
+            <a data-fancybox="gallery" href="images/starlooks/6.png">
+                <img src="images/starlooks/6.png" alt="White Dwarf">
+            </a>
+        </div>
+        <div class="masonry-item">
+            <a data-fancybox="gallery" href="images/starlooks/7.png">
+                <img src="images/starlooks/7.png" alt="Super Red Giant">
+            </a>
+        </div>
+        <div class="masonry-item">
+            <a data-fancybox="gallery" href="images/starlooks/8.png">
+                <img src="images/starlooks/8.png" alt="Supernova">
+            </a>
+        </div>
+        <div class="masonry-item">
+          <a data-fancybox="gallery" href="images/starlooks/9.png">
+              <img src="images/starlooks/9.png" alt="Neutron Star">
+          </a>
       </div>
+        <div class="masonry-item">
+          <a data-fancybox="gallery" href="images/starlooks/10.png">
+              <img src="images/starlooks/10.png" alt="Black Hole">
+          </a>
+      </div>
+    </div>
   
         <div class="text-wrapper">
             <h1>Sources</h1>
@@ -263,8 +294,13 @@ img {
             </div>
         </div>
     </footer>
+    <!-- Fancybox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script>
-      Zoom(".zoomable");
+        // Initialize Fancybox
+        Fancybox.bind("[data-fancybox]", {
+            // Optional: Add custom settings here
+        });
     </script>
 </body>
 </html>

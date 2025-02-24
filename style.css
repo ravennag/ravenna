@@ -560,7 +560,7 @@ fill: rgb(150, 247, 252);
           border-radius: 10px;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
           transition: transform 0.3s ease;
-          background: #f4f4f4; /* Background color for each item */
+          background: #ffffff; /* Background color for each item */
       }
 
       .masonry-item img {
@@ -574,6 +574,11 @@ fill: rgb(150, 247, 252);
       .masonry-item:hover {
           transform: scale(1.05); /* Slight zoom on hover */
       }
+
+      .side-img img {
+        border-radius: 15px;
+    }
+
 
       
 /*BANNER*/

@@ -8,7 +8,7 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
     <title>Ravenna G | SPA203</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/smooth-zoom/dist/zoom.browser.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
     <style>
 
         .banner {
@@ -162,19 +162,55 @@ img {
     <br>
     <h2 style="text-align:center">Example Comics</h2>
     <br>
-    <div class="flexbin flexbin-margin">
-        <!-- 			🔥 4. change the below hrefs from cssscript.com to your site or just eliminate them :) -->
-        <!-- 			🔥 5. add "zoomable" class to images -->
-        <img class="zoomable" src="images/spa203/Qué hacían cuando eran niños (1).png" alt="Qué hacían cuando eran niños"/>
-        <img class="zoomable" src="images/spa203/la juventud.png" alt="La juventud"/>
-        <img class="zoomable" src="images/spa203/arbol.jpg" alt="arbol genelogico"/>
-        <img class="zoomable" src="images/spa203/elenalucia (1).png" alt="Elena y Lucia"/>
-        <img class="zoomable" src="images/spa203/Un domingo de María y Cheo 1.png" alt="Maria y Cheo 1"/>
-        <img class="zoomable" src="images/spa203/Un domingo de María y Cheo 2.png" alt="Maria y Cheo 2"/>
-        <img class="zoomable" src="images/spa203/ana1 (1).png" alt="Ana 1"/>
-        <img class="zoomable" src="images/spa203/ana2 (1).png" alt="Ana 2"/>
-        <img class="zoomable" src="images/spa203/findesemana - Raul.png" alt="Raul"/>
+    <div class="masonry-gallery">
+        <!-- Gallery Items -->
+        <div class="masonry-item">
+            <a data-fancybox="gallery" href="images/spa203/Qué hacían cuando eran niños (1).png">
+                <img src="images/spa203/Qué hacían cuando eran niños (1).png" alt="Qué hacían cuando eran niños">
+            </a>
         </div>
+        <div class="masonry-item">
+            <a data-fancybox="gallery" href="images/spa203/la juventud.png">
+                <img src="images/spa203/la juventud.png" alt="La juventud">
+            </a>
+        </div>
+        <div class="masonry-item">
+            <a data-fancybox="gallery" href="images/spa203/arbol.jpg">
+                <img src="images/spa203/arbol.jpg" alt="Arbol">
+            </a>
+        </div>
+        <div class="masonry-item">
+            <a data-fancybox="gallery" href="images/spa203/elenalucia (1).png">
+                <img src="images/spa203/elenalucia (1).png" alt="Elena lucia">
+            </a>
+        </div>
+        <div class="masonry-item">
+            <a data-fancybox="gallery" href="images/spa203/Un domingo de María y Cheo 1.png">
+                <img src="images/spa203/Un domingo de María y Cheo 1.png" alt="Domingo">
+            </a>
+        </div>
+        <div class="masonry-item">
+          <a data-fancybox="gallery" href="images/spa203/Un domingo de María y Cheo 2.png">
+              <img src="images/spa203/Un domingo de María y Cheo 2.png" alt="Domingo 2">
+          </a>
+      </div>
+        <div class="masonry-item">
+          <a data-fancybox="gallery" href="images/spa203/ana1 (1).png">
+              <img src="images/spa203/ana1 (1).png" alt="Ana">
+          </a>
+      </div>
+      <div class="masonry-item">
+        <a data-fancybox="gallery" href="images/spa203/ana2 (1).png">
+            <img src="images/spa203/ana2 (1).png" alt="Ana 2">
+        </a>
+    </div>
+    <div class="masonry-item">
+      <a data-fancybox="gallery" href="images/spa203/findesemana - Raul.png">
+          <img src="images/spa203/findesemana - Raul.png" alt="Raul">
+      </a>
+  </div>
+     </div>
+
         <div class="button-container">
             <a href="projects.html" class="button-link">
                 <button class="responsive-button">Back to PROJECTS</button>
@@ -200,8 +236,13 @@ img {
             </div>
         </div>
     </footer>
+    <!-- Fancybox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script>
-        Zoom(".zoomable");
-      </script>
+        // Initialize Fancybox
+        Fancybox.bind("[data-fancybox]", {
+            // Optional: Add custom settings here
+        });
+    </script>
 </body>
 </html>

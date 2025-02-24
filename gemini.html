@@ -78,7 +78,12 @@
     align-items: center;
 }
 
-
+.side-img{
+    width: 40%;
+    } 
+.other-img{
+    width: 60%;
+}
 @media (max-width: 768px) {
     .banner{
         height:20vh;
@@ -86,7 +91,19 @@
     .text-wrapper h1{
             font-size: 2.7em;
     }
-
+    .side-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    border-radius: 10px;
+    } 
+    .masonry-gallery{
+     padding: 20px;   
+    }
+    .other-img{
+    width: 100%;
+   }
     .container {
         flex-direction: column;
         align-items: flex-start;
@@ -173,21 +190,38 @@ img {
         
             <br>
         </div>
-        <div class="image">
-            <img src="images/graphicdesign/Gemini_Thumbnail.jpg" alt="card mockup" class="zoomable">
+        <div class="side-img">
+            <a data-fancybox="gallery" href="images/graphicdesign/Gemini_Thumbnail.jpg">
+                <img src="images/graphicdesign/Gemini_Thumbnail.jpg" alt="business cards">
+            </a>
         </div>
     </div>
     <br>
-    <div class="flexbin flexbin-margin">
-        <img class="zoomable" style="max-width: 25%;" src="images/gemini/Business Card Variants-01.png" alt="Business card variant 1" />
-        <img class="zoomable" style="max-width: 25%;"src="images/gemini/Business Card Variants-02.png" alt="Business card variant 2"/>
-        <img class="zoomable" style="max-width: 25%;"src="images/gemini/Business Card Variants-03.png" alt="Business card variant 3"/>
+    <div class="masonry-gallery">
+        <!-- Gallery Items -->
+        <div class="masonry-item">
+            <a data-fancybox="gallery" href="images/gemini/Business Card Variants-01.png">
+                <img src="images/gemini/Business Card Variants-01.png" alt="business card 1">
+            </a>
         </div>
+        <div class="masonry-item">
+            <a data-fancybox="gallery" href="images/gemini/Business Card Variants-02.png">
+                <img src="images/gemini/Business Card Variants-02.png" alt="business card 2">
+            </a>
+        </div>
+        <div class="masonry-item">
+            <a data-fancybox="gallery" href="images/gemini/Business Card Variants-03.png">
+                <img src="images/gemini/Business Card Variants-03.png" alt="business card 3">
+            </a>
+        </div>
+    </div>    
     
     <div class="container">
         
-        <div class="image">
-            <img src="images/gemini/GeminiFree-Tri-Fold-Mockup-PSD-File.jpg" alt="Gemini Trifold" class="zoomable">
+        <div class="side-img">
+            <a data-fancybox="gallery" href="images/gemini/GeminiFree-Tri-Fold-Mockup-PSD-File.jpg">
+                <img src="images/gemini/GeminiFree-Tri-Fold-Mockup-PSD-File.jpg" alt="trifold">
+            </a>
         </div>
         <div class="text" style="padding-left:5%;">
             <h2 style="text-align: center;">Trifold</h2>
@@ -210,8 +244,10 @@ img {
         
             <br>
         </div>
-        <div class="image">
-            <img src="images/gemini/Gemini_LongBranchLifeStylesDec-01-01.png" alt="Gemini Spray Foam magazine ad" class="zoomable"  style="max-width: 90%;">
+        <div class="other-img">
+            <a data-fancybox="gallery" href="images/gemini/Gemini_LongBranchLifeStylesDec-01-01.png">
+                <img src="images/gemini/Gemini_LongBranchLifeStylesDec-01-01.png" alt="magazine ad">
+            </a>
         </div>
     </div>
 <br>
@@ -242,8 +278,12 @@ img {
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script>
-        Zoom(".zoomable");
-      </script>
+        // Initialize Fancybox
+        Fancybox.bind("[data-fancybox]", {
+            // Optional: Add custom settings here
+        });
+    </script>
 </body>
 </html>

@@ -8,7 +8,7 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
     <title>Ravenna G | New Hope</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/smooth-zoom/dist/zoom.browser.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
     <style>
         .banner {
             display:flex;
@@ -49,8 +49,10 @@
     margin-top: 5%;
     margin-bottom: 0px;
 }
-.zoomable{
-    padding: 5%;
+.masonry-gallery{
+    width:60%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .process iframe{
   display: block;
@@ -84,7 +86,9 @@
     max-width: 100%;
     height: auto;
 }
-
+.qr-code{
+    width:40%;
+}
 @media (max-width: 768px) {
     .banner{
         height:20vh;
@@ -97,7 +101,9 @@
         flex-direction: column;
         align-items: flex-start;
     }
-
+    .qr-code{
+    width:80%;
+}
     .text, .image {
         flex: unset;
         width: 100%;
@@ -109,6 +115,10 @@
         display: flex;
         justify-content: center;
     }
+
+    .masonry-gallery{
+    width:100%;
+}
 .process iframe{
         width: 60%;
         height: 30%;
@@ -195,7 +205,7 @@ img {
     </div>
     <div class="container">
         <div class="image">
-            <img class="zoomable" src="images/newhope/test.png" alt="Image" >
+            <img class="qr-code" src="images/newhope/test.png" alt="Image">
         </div>
         <div class="text">
             <h1 style="text-align: center;">Try It Out!</h1>
@@ -207,13 +217,24 @@ img {
 
     <h1 style="text-align:center">Screenshots from Hoverlay App</h1>
 
-    <div class="flexbin flexbin-margin">
-      <!-- 			🔥 4. change the below hrefs from cssscript.com to your site or just eliminate them :) -->
-      <!-- 			🔥 5. add "zoomable" class to images -->
-      <img class="zoomable" src="images/newhope/IMG_0370.png" alt="Screenshot of Hoverlay app"/>
-      <img class="zoomable" src="images/newhope/IMG_0371.png" alt="Screenshot of Hoverlay app"/>
-      <img class="zoomable" src="images/newhope/IMG_0373.png" alt="Screenshot of Hoverlay app"/>
-      </div>
+    <div class="masonry-gallery">
+        <!-- Gallery Items -->
+        <div class="masonry-item">
+            <a data-fancybox="gallery" href="images/newhope/IMG_0370.png">
+                <img src="images/newhope/IMG_0370.png" alt="screenshot 1">
+            </a>
+        </div>
+        <div class="masonry-item">
+            <a data-fancybox="gallery" href="images/newhope/IMG_0371.png">
+                <img src="images/newhope/IMG_0371.png" alt="screenshot 2">
+            </a>
+        </div>
+        <div class="masonry-item">
+            <a data-fancybox="gallery" href="images/newhope/IMG_0373.png">
+                <img src="images/newhope/IMG_0373.png" alt="screenshot 3">
+            </a>
+        </div>
+    </div>
 
     <div class="process">
         <h1>Demo Video</h1>
@@ -242,8 +263,13 @@ src="https://www.youtube.com/embed/KqEvE1jzwto?si=GUonxF4I6YK8wOXP"title="YouTub
           </div>
         </div>
     </footer>
+    <!-- Fancybox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script>
-      Zoom(".zoomable");
+        // Initialize Fancybox
+        Fancybox.bind("[data-fancybox]", {
+            // Optional: Add custom settings here
+        });
     </script>
 </body>
 </html>
