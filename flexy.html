@@ -8,7 +8,7 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
     <title>Ravenna G | Flexy</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/smooth-zoom/dist/zoom.browser.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
     <style>
         .banner {
             display:flex;
@@ -37,10 +37,7 @@
            margin: 0px;
            padding: 0px;
         }
-        .zoomable {
-        max-width: 80%; /* Ensures the image does not exceed 30% of the parent's width */
-        height: auto; /* Automatically adjusts height to maintain the aspect ratio */
-      }
+
 
 .text-wrapper{
     margin-bottom: 50px;
@@ -83,11 +80,13 @@ h2{
     justify-content: center;
     align-items: center;
 }
-
+.side-img img {
+    border-radius: 15px;
+}
 
 @media (max-width: 768px) {
     .banner{
-        height:20vh;
+        height:50px;
     }
     .text-wrapper h1{
             font-size: 2.7em;
@@ -121,6 +120,14 @@ h2{
         display: none;
     }
 
+    .side-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-radius: 10px;
+    } 
+
 }
 
 .download-button {
@@ -129,7 +136,7 @@ h2{
             margin: auto;
             padding: 10px 20px;
             background-color: #067359;
-            color: rgb(255, 229, 229);
+            color:rgb(252, 249, 249);
             text-decoration: none;
             border-radius: 5px;
             font-size: 16px;
@@ -170,7 +177,7 @@ img {
     <h1>Flexy Website</h1>
       <div class="container">
         <div class="text">
-            <h2>A peculiar little creature</h2>
+            <h2>A Peculiar Little Creature</h2>
             <br>
             <p>Flexy is an original character that I made in 2016. He's a white bean with legs and he loves to travel the world and get into all sorts of trouble. Over the years, I've made comics, stop motion videos, games, and merch designs of Flexy and wanted to make a website joining all of those pieces of media together. I made the site using pure HTML/CSS and some of the code actually forms the base of this website! </p>
             <br>
@@ -180,28 +187,58 @@ img {
         
             <br>
         </div>
-        <div class="image">
-            <img src="images/flexy/flexywebmockup_Mesa de trabajo 1_Mesa de trabajo 1.png" alt="Flexy web" class="zoomable">
+        <div class="side-img" style="width:40%">
+            <a data-fancybox="gallery" href="images/flexy/flexywebmockup_Mesa de trabajo 1_Mesa de trabajo 1.png">
+                <img src="images/flexy/flexywebmockup_Mesa de trabajo 1_Mesa de trabajo 1.png" alt="web mockup">
+            </a>
         </div>
     </div>
     <br>
     <h2>Initial Sketches and Planning</h2>
-    <div class="flexbin flexbin-margin">
-        <img class="zoomable" style="max-width: 20%;" src="images/flexy/ravenna-gemignani-sitemap.jpg" alt="travels" />
-        <img class="zoomable" style="max-width: 20%;" src="images/flexy/ravenna-gemignani-websketch.jpg" alt="travels" />
-        <img class="zoomable" style="max-width: 20%;" src="images/flexy/ravenna-gemignani-user-personas.jpg" alt="travels" />
-        </div>
+<div class="masonry-gallery">
+    <!-- Gallery Items -->
+    <div class="masonry-item">
+        <a data-fancybox="gallery" href="images/flexy/ravenna-gemignani-sitemap.jpg">
+            <img src="images/flexy/ravenna-gemignani-sitemap.jpg" alt="sitemap">
+        </a>
+    </div>
+    <div class="masonry-item">
+        <a data-fancybox="gallery" href="images/flexy/ravenna-gemignani-user-personas.jpg">
+            <img src="images/flexy/ravenna-gemignani-user-personas.jpg" alt="user personas">
+        </a>
+    </div>
+    <div class="masonry-item">
+        <a data-fancybox="gallery" href="images/flexy/ravenna-gemignani-websketch.jpg">
+            <img src="images/flexy/ravenna-gemignani-websketch.jpg" alt="web sketch">
+        </a>
+    </div>
+</div>
     <h2>Final Site Screenshots</h2>
-    <div class="flexbin flexbin-margin">
-        <img class="zoomable" style="max-width: 20%;" src="images/flexy/games.png" alt="games" />
-        <img class="zoomable" style="max-width: 20%;" src="images/flexy/merch.png" alt="merch" />
-        <img class="zoomable" style="max-width: 20%;" src="images/flexy/travels.png" alt="travels" />
+    <div class="masonry-gallery">
+        <!-- Gallery Items -->
+        <div class="masonry-item">
+            <a data-fancybox="gallery" href="images/flexy/merch.png">
+                <img src="images/flexy/merch.png" alt="merch">
+            </a>
         </div>
+        <div class="masonry-item">
+            <a data-fancybox="gallery" href="images/flexy/games.png">
+                <img src="images/flexy/games.png" alt="games">
+            </a>
+        </div>
+        <div class="masonry-item">
+            <a data-fancybox="gallery" href="images/flexy/travels.png">
+                <img src="images/flexy/travels.png" alt="travels">
+            </a>
+        </div>
+    </div>
     
     <div class="container">
         
-        <div class="image">
-            <img src="images/flexy/desertgoobs.jpg" alt="desert goobs" class="zoomable">
+        <div class="side-img" style="width:40%">
+            <a data-fancybox="gallery" href="images/flexy/desertgoobs.jpg">
+                <img src="images/flexy/desertgoobs.jpg" alt="desert goobs">
+            </a>
         </div>
         <div class="text" style="padding-left:5%;">
             <h2 style="text-align: center;">Try it out yourself!</h2>
@@ -242,8 +279,13 @@ img {
             </div>
         </div>
     </footer>
+    <!-- Fancybox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script>
-        Zoom(".zoomable");
-      </script>
+        // Initialize Fancybox
+        Fancybox.bind("[data-fancybox]", {
+            // Optional: Add custom settings here
+        });
+    </script>
 </body>
 </html>

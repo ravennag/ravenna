@@ -6,18 +6,10 @@
     <title>Ravenna G | Graphic Design Portfolio</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/smooth-zoom/dist/zoom.browser.js"></script>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
 <style>
     /* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: #333;
-    background-color: rgb(233, 239, 239);
-}
+
 
 .banner {
             display:flex;
@@ -32,7 +24,7 @@ body {
         }
 h1 {
     margin: 0;
-    color: blanchedalmond;
+    color: rgb(255, 255, 255);
 }
 a{
           text-decoration: none;
@@ -74,7 +66,11 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-
+@media screen {
+    .banner{
+      height:15vh;   
+    }
+}
 /* Button Styles */
 button {
     display: block;
@@ -93,7 +89,28 @@ button:hover {
     background-color: #666;
 }
 
+.button {
+            background-color: #aa330f;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px 2px;
+            cursor: pointer;
+            border-radius: 20px;
+            width: 20%;
+            transition: all .2s ease-in-out;
+            }
+.button:hover{
+    background-color: #811b02;
+    transition: all .2s ease-in-out;
+}
 
+.button{
+        width: 90%;
+    }
 </style>
 </head>
 <body>
@@ -158,18 +175,46 @@ button:hover {
         </section>
 
         <!-- Posters Section -->
-        <section id="posters">
-            <h2>Posters</h2>
-            <div class="flexbin flexbin-margin">
-            <img class="zoomable" src="images/graphicdesign/michael sundae-min.png" alt="Michael Sundae"/>
-            <img class="zoomable" src="images/graphicdesign/kristen---Copy-01.jpg" alt="Kristen"/>
-            <img class="zoomable" src="images/graphicdesign/Megan's-Fabulous-Day-02-01.jpg" alt="Megan's Poster"/>
-            <img class="zoomable" src="images/graphicdesign/bag template-01.png" alt="Bag"/>
-            <img class="zoomable" src="images/graphicdesign/illustrator cat-01.png" alt="Illustrator Cat"/>
-            <img class="zoomable" src="images/graphicdesign/naveen_poster.png" alt="Naveen Poster"/>
+         <h2>Print</h2>
+        <div class="masonry-gallery">
+            <!-- Gallery Items -->
+            <div class="masonry-item">
+                <a data-fancybox="gallery" href="images/graphicdesign/bag template-01.png">
+                    <img src="images/graphicdesign/bag template_thumb.jpg" alt="bag template">
+                </a>
             </div>
-        </section>
+            <div class="masonry-item">
+                <a data-fancybox="gallery" href="images/graphicdesign/kristen---Copy-01.jpg">
+                    <img src="images/graphicdesign/kristen---Copy-01.jpg" alt="kristen">
+                </a>
+            </div>
+            <div class="masonry-item">
+                <a data-fancybox="gallery" href="images/graphicdesign/Megan's-Fabulous-Day-02-01.jpg">
+                    <img src="images/graphicdesign/Megan's-Fabulous-Day-02-01_thumb.jpg" alt="megan">
+                </a>
+            </div>
+            <div class="masonry-item">
+                <a data-fancybox="gallery" href="images/graphicdesign/cheatsheet.png">
+                    <img src="images/graphicdesign/cheatsheet_thumb-01.png" alt="cheat sheet">
+                </a>
+            </div>
+            <div class="masonry-item">
+                <a data-fancybox="gallery" href="images/graphicdesign/michael sundae-min.png">
+                    <img src="images/graphicdesign/michael sundae-min.png" alt="Michael sundae">
+                </a>
+            </div>
+            <div class="masonry-item">
+                <a data-fancybox="gallery" href="images/graphicdesign/naveen_poster.png">
+                    <img src="images/graphicdesign/naveen_poster_thumb.jpg" alt="Naveen">
+                </a>
+            </div>
     </main>
+
+    <div class="button-container">
+        <a href="portfolio.html" class="button-link">
+            <button class="responsive-button">Back to PORTFOLIO</button>
+        </a>
+    </div>
 
     <footer>
         <div class="footer-container">
@@ -186,8 +231,13 @@ button:hover {
       </div>
       </div>
     </footer>
+    <!-- Fancybox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script>
-        Zoom(".zoomable");
-      </script>
+        // Initialize Fancybox
+        Fancybox.bind("[data-fancybox]", {
+            // Optional: Add custom settings here
+        });
+    </script>
 </body>
 </html>

@@ -148,7 +148,7 @@ button:hover{
             <div id="status" style="margin-top: 10px;"></div>
           </form>
         <div class="drawing-section">
-            <div>Draw a picture if you like (Computer Only)</div>
+            <div>Draw a picture if you like</div>
             <canvas id="drawingCanvas" width="300" height="300"></canvas>
             <button class="clear-button" type="button" onclick="clearCanvas()">Clear</button>
         </div>
@@ -174,7 +174,8 @@ button:hover{
         const canvas = document.getElementById('drawingCanvas');
         const ctx = canvas.getContext('2d');
         let drawing = false;
-
+    
+        // Function to get mouse position
         function getMousePos(canvas, evt) {
             const rect = canvas.getBoundingClientRect();
             return {
@@ -182,21 +183,31 @@ button:hover{
                 y: evt.clientY - rect.top
             };
         }
-
-        function startDrawing(evt) {
+    
+        // Function to get touch position
+        function getTouchPos(canvas, touch) {
+            const rect = canvas.getBoundingClientRect();
+            return {
+                x: touch.clientX - rect.left,
+                y: touch.clientY - rect.top
+            };
+        }
+    
+        // Start drawing
+        function startDrawing(pos) {
             drawing = true;
-            const pos = getMousePos(canvas, evt);
             ctx.moveTo(pos.x, pos.y);
         }
-
+    
+        // Stop drawing
         function stopDrawing() {
             drawing = false;
             ctx.beginPath();
         }
-
-        function draw(evt) {
+    
+        // Draw function
+        function draw(pos) {
             if (!drawing) return;
-            const pos = getMousePos(canvas, evt);
             ctx.lineWidth = 2;
             ctx.lineCap = 'round';
             ctx.strokeStyle = 'black';
@@ -205,46 +216,71 @@ button:hover{
             ctx.beginPath();
             ctx.moveTo(pos.x, pos.y);
         }
-
-        canvas.addEventListener('mousedown', startDrawing);
+    
+        // Mouse event listeners
+        canvas.addEventListener('mousedown', (evt) => {
+            const pos = getMousePos(canvas, evt);
+            startDrawing(pos);
+        });
         canvas.addEventListener('mouseup', stopDrawing);
         canvas.addEventListener('mouseout', stopDrawing);
-        canvas.addEventListener('mousemove', draw);
-
+        canvas.addEventListener('mousemove', (evt) => {
+            const pos = getMousePos(canvas, evt);
+            draw(pos);
+        });
+    
+        // Touch event listeners
+        canvas.addEventListener('touchstart', (evt) => {
+            evt.preventDefault();
+            const touch = evt.touches[0];
+            const pos = getTouchPos(canvas, touch);
+            startDrawing(pos);
+        });
+        canvas.addEventListener('touchend', stopDrawing);
+        canvas.addEventListener('touchcancel', stopDrawing);
+        canvas.addEventListener('touchmove', (evt) => {
+            evt.preventDefault();
+            const touch = evt.touches[0];
+            const pos = getTouchPos(canvas, touch);
+            draw(pos);
+        });
+    
+        // Clear canvas
         function clearCanvas() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
         }
-
+    
+        // Prepare drawing data for form submission
         function prepareDrawingData() {
             const drawingDataInput = document.getElementById('drawingData');
             drawingDataInput.value = canvas.toDataURL();
         }
-		$(".external").attr("target", "_blank"); 
-
+    
+        // Form submission handling
         document.getElementById('myForm').addEventListener('submit', function(event) {
-        event.preventDefault();  // Prevent the default form submission
-
-        var form = event.target;
-        var formData = new FormData(form);
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', form.action, true);
-
-        xhr.setRequestHeader('Accept', 'application/json');
-
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === XMLHttpRequest.DONE) {
-                var statusDiv = document.getElementById('status');
-                if (xhr.status === 200) {
-                    statusDiv.innerHTML = "Thank you for your message!";
-                    form.reset();  // Clear the form
-                } else {
-                    statusDiv.innerHTML = "Oops! There was a problem submitting your form.";
+            event.preventDefault();  // Prevent the default form submission
+    
+            var form = event.target;
+            var formData = new FormData(form);
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', form.action, true);
+    
+            xhr.setRequestHeader('Accept', 'application/json');
+    
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    var statusDiv = document.getElementById('status');
+                    if (xhr.status === 200) {
+                        statusDiv.innerHTML = "Thank you for your message!";
+                        form.reset();  // Clear the form
+                    } else {
+                        statusDiv.innerHTML = "Oops! There was a problem submitting your form.";
+                    }
                 }
-            }
-        };
-
-        xhr.send(formData);
-    });
+            };
+    
+            xhr.send(formData);
+        });
     </script>
 </body>
 </html>

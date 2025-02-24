@@ -8,7 +8,7 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
     <title>Ravenna G | Inventipity</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/smooth-zoom/dist/zoom.browser.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
     <style>
         .banner {
             display:flex;
@@ -37,11 +37,14 @@
            margin: 0px;
            padding: 0px;
         }
-        .zoomable {
-        max-width: 80%; /* Ensures the image does not exceed 30% of the parent's width */
+        .masonry-gallery {
+        margin-left:10%; /* Ensures the image does not exceed 30% of the parent's width */
+        margin-right:10%; /* Ensures the image does not exceed 30% of the parent's width */
         height: auto; /* Automatically adjusts height to maintain the aspect ratio */
       }
-
+.side-img img {
+    border-radius: 15px;
+}
 .text-wrapper{
     margin-bottom: 50px;
 }
@@ -55,14 +58,6 @@
     margin-bottom: 0px;
 }
 
-.process iframe{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
-  margin-bottom: 40px;
-
-}
 .process h1{
    text-align: center; 
    margin-bottom: 20px;
@@ -75,17 +70,12 @@
    text-indent: 2em; /* or 15px, or 5%, 2rem or 3vw */
  }
 
-.image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 
 @media (max-width: 768px) {
     .banner{
-        height:20vh;
+        height:50px;
     }
     .text-wrapper h1{
             font-size: 2.7em;
@@ -96,17 +86,6 @@
         align-items: flex-start;
     }
 
-    .text, .image {
-        flex: unset;
-        width: 100%;
-        padding-right: 0;
-    }
-
-    .image {
-        margin-top: 20px;
-        display: flex;
-        justify-content: center;
-    }
 .process iframe{
         width: 60%;
         height: 30%;
@@ -118,7 +97,19 @@
     .modal-content .column {
         display: none;
     }
-
+    .masonry-gallery {
+        margin-left:5%; /* Ensures the image does not exceed 30% of the parent's width */
+        margin-right:5%; /* Ensures the image does not exceed 30% of the parent's width */
+        padding:2px;
+        height: auto; /* Automatically adjusts height to maintain the aspect ratio */
+      } 
+    .side-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    border-radius: 10px;
+    } 
 }
 
 .download-button {
@@ -168,36 +159,50 @@ img {
     <h1>Inventipity</h1>
       <div class="container">
         <div class="text">
-            <h2>Inventipity</h2>
+            <h2>A New Fun Card Game</h2>
             <br>
             <p>Box design for Inventipity, a project created by me and Michael Zajacz. At the beginning of the round, the judge draws a Concept card which is an everyday problem that needs to get solved. Players will use their Spare Parts cards to come up with an invention to solve that problem. After a player pitches their idea, an Error card is introduced. At the end of the round, the judge picks the best pitch and they collect a Concept card. Whoever gets the most Concept cards wins.</p>
             <br>
             <p>Michael Zajacz was responsible for the concept while I created the box design, logo, and mascot.</p>
             <br>
-            <br>
-        
-            <br>
         </div>
-        <div class="image">
-            <img src="images/graphicdesign/IMG_1132.jpg" alt="Inventipity box" class="zoomable">
+        <div class="side-img" style="width:50%">
+            <a data-fancybox="gallery" href="images/graphicdesign/inventipity.png">
+                <img src="images/graphicdesign/inventipity.png" alt="inventipity">
+            </a>
         </div>
     </div>
     <br>
-    <div class="flexbin flexbin-margin">
-        <img class="zoomable" style="max-width: 30%;" src="images/inventipity/inventipity_1-01.png" alt="Inventipity 1" />
-        <img class="zoomable" style="max-width: 30%;" src="images/inventipity/inventipity_2-01.png" alt="Inventipity 2" />
-        <img class="zoomable" style="max-width: 30%;" src="images/inventipity/inventipity_3-01-01.png" alt="Inventipity 3" />
+    <div class="masonry-gallery">
+        <!-- Gallery Items -->
+        <div class="masonry-item">
+            <a data-fancybox="gallery" href="images/inventipity/inventipity_1-01.png">
+                <img src="images/inventipity/inventipity_1-01.png" alt="inventipity">
+            </a>
+        </div>
+        <div class="masonry-item">
+            <a data-fancybox="gallery" href="images/inventipity/inventipity_2-01.png">
+                <img src="images/inventipity/inventipity_2-01.png" alt="inventipity">
+            </a>
+        </div>
+        <div class="masonry-item">
+            <a data-fancybox="gallery" href="images/inventipity/inventipity_3-01-01.png">
+                <img src="images/inventipity/inventipity_3-01-01.png" alt="inventipity">
+            </a>
+        </div>
         </div>
     
     <div class="container">
         
-        <div class="image">
-            <img src="images/inventipity/Invetipity_Full Set.jpg" alt="Inventipity Full set" class="zoomable">
+        <div class="side-img" style="width:30%" >
+            <a data-fancybox="gallery" href="images/inventipity/Invetipity_Full Set.jpg">
+                <img src="images/inventipity/Invetipity_Full Set.jpg" alt="inventipity">
+            </a>
         </div>
         <div class="text" style="padding-left:5%;">
             <h2 style="text-align: center;">Full Card Set</h2>
             <br>
-            <p>Full Inventipity card set which includes Concept cards, Error cards, and Spare Parts cards along with instructions. </p>
+            <p style="text-indent: 0px; width:50%; display: block; margin-left: auto; margin-right: auto; text-align:center;">Full Inventipity card set which includes Concept cards, Error cards, and Spare Parts cards along with instructions. </p>
             <br>
         </div>
     </div>
@@ -228,8 +233,13 @@ img {
             </div>
         </div>
     </footer>
+    <!-- Fancybox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script>
-        Zoom(".zoomable");
-      </script>
+        // Initialize Fancybox
+        Fancybox.bind("[data-fancybox]", {
+            // Optional: Add custom settings here
+        });
+    </script>
 </body>
 </html>

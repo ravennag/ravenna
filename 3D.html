@@ -7,33 +7,12 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
     <title>Ravenna G | 3D</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/smooth-zoom/dist/zoom.browser.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
     <style>
       body{  
          background:rgb(241, 245, 243);
       }
 
-       .flexbin{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 90%;
-        margin: 0px auto;
-        margin-bottom: 10%;
-      }
-      .zoomable {
-        width: 30%;
-        height: auto;
-        border-radius: 15px;
-        padding: 5px;
-        transition: all 0.5s ease;
-      }
-
-      .zoomable:hover{
-        cursor: pointer;
-        transform: scale(1.07);
-        transition: all 0.5s ease;
-      }
       .button {
             background-color: #aa330f;
             color: white;
@@ -56,15 +35,20 @@
        .button{
                 width: 90%;
             }
-
-      
-      @media screen and (max-width:450px){
-        .flexbin .zoomable {
-        width: 100%;
-        height: auto;
+@media (max-width: 768px) {
+    .illustrations-container{
+        position: relative;
       }
+    .masonry-gallery{
+        padding:10px;
+    }
 
-      }
+      footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+}
   </style>
 </head>
 <body>
@@ -88,31 +72,65 @@
             </div>
         </div>
           <br>
-          <br>
-          <br>
           <p style="text-align: center;"> Programs Used: Maya, Blender, and ZBrush</p>
           <br>
-          <br>
-          <br>
 
-       <div class="flexbin flexbin-margin">
-        <!-- 			🔥 4. change the below hrefs from cssscript.com to your site or just eliminate them :) -->
-        <!-- 			🔥 5. add "zoomable" class to images -->
-        <img class="zoomable" src="images/3D/GemignaniR_characterInEnvironmentRENDERED_01-min (1).png" alt="Martín in subway"/>
-        <img class="zoomable" src="images/3D/GemignaniR_characterInEnvironmentRENDERED_02-min.png" alt="Two characters on subway facing forward, one monster and one eyeball creature" />
-        <img class="zoomable" src="images/3D/GemignaniR_turnaround_01-min.png" alt="Martín turnaround final model"/>
-        <img class="zoomable" src="images/3D/WIP3-20-min.png" alt="Topology of subway model"/>
-        <img class="zoomable" src="images/3D/mebo_render1(final)-min.png" alt="MEBO at bus stop" />
-        <img class="zoomable" src="images/3D/Mebo_9-min.png" alt="MEBO and BLEBO close up"/>
-        <img class="zoomable" src="images/3D/Michael_Memento-min-min.jpg" alt="Michael in front of Capyboba boba shop" />
-        <img class="zoomable" src="images/3D/GemignaniR_EnvironmentRender1-min.png" alt="Capyboba building model"/>
-        <img class="zoomable" src="images/3D/GemignaniR_EnvironmentProgressCheck-min.png" alt="Orthographic view of Capyboba building"/>
+          <div class="masonry-gallery">
+            <!-- Gallery Items -->
+            <div class="masonry-item">
+                <a data-fancybox="gallery" href="images/3D/GemignaniR_characterInEnvironmentRENDERED_01-min (1).png">
+                    <img src="images/3D/GemignaniR_characterInEnvironmentRENDERED_01-min (1).png" alt="Martin in subway">
+                </a>
+            </div>
+            <div class="masonry-item">
+                <a data-fancybox="gallery" href="images/3D/GemignaniR_characterInEnvironmentRENDERED_02-min.png">
+                    <img src="images/3D/GemignaniR_characterInEnvironmentRENDERED_02-min.png" alt="Metromaro friends">
+                </a>
+            </div>
+            <div class="masonry-item">
+                <a data-fancybox="gallery" href="images/3D/GemignaniR_turnaround_01-min.png">
+                    <img src="images/3D/GemignaniR_turnaround_01-min_thumb.jpg" alt="Martin turnaround model">
+                </a>
+            </div>
+            <div class="masonry-item">
+                <a data-fancybox="gallery" href="images/3D/WIP3-20-min.png">
+                    <img src="images/3D/WIP3-20-min.png" alt="Subway model WIP">
+                </a>
+            </div>
+            <div class="masonry-item">
+                <a data-fancybox="gallery" href="images/3D/mebo_render1(final)-min.png">
+                    <img src="images/3D/mebo_render1(final)-min.png" alt="MEBO environment">
+                </a>
+            </div>
+            <div class="masonry-item">
+                <a data-fancybox="gallery" href="images/3D/Mebo_9-min.png">
+                    <img src="images/3D/Mebo_9-min.png" alt="MEBO and friend">
+                </a>
+            </div>
+            <div class="masonry-item">
+              <a data-fancybox="gallery" href="images/3D/Michael_Memento-min-min.jpg">
+                  <img src="images/3D/Michael_Memento-min-min_thumb.jpg" alt="Michael">
+              </a>
+          </div>
+            <div class="masonry-item">
+              <a data-fancybox="gallery" href="images/3D/GemignaniR_EnvironmentProgressCheck-min.png">
+                  <img src="images/3D/GemignaniR_EnvironmentProgressCheck-min.png" alt="environment">
+              </a>
+          </div>
+          <div class="masonry-item">
+            <a data-fancybox="gallery" href="images/3D/GemignaniR_EnvironmentRender1-min.png">
+                <img src="images/3D/GemignaniR_EnvironmentRender1-min_thumb.jpg" alt="capyboba model">
+            </a>
+        </div>
+        </div>
         <div class="button-container">
-          <a href="index.html" class="button-link">
-              <button class="responsive-button">Back to HOME</button>
+          <a href="portfolio.html" class="button-link">
+              <button class="responsive-button">Back to PORTFOLIO</button>
           </a>
       </div>
-        </div>
+    </div>
+    </div>
+</div>
          <footer>
           <div class="footer-container">
             <div class="copyright"> ©  <script>document.write(new Date().getFullYear())</script> Ravenna Gemignani</div>
@@ -129,9 +147,13 @@
         </div>
       </footer>
 
-      </div>
-    <script>
-      Zoom(".zoomable");
-    </script>
+
+      <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+      <script>
+          // Initialize Fancybox
+          Fancybox.bind("[data-fancybox]", {
+              // Optional: Add custom settings here
+          });
+      </script>
 </body>
 </html>

@@ -8,8 +8,11 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
     <title>Ravenna G | Louis & Sons</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/smooth-zoom/dist/zoom.browser.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
     <style>
+        .masonry-item {
+          width: 50%;
+      }
         .banner {
             display:flex;
             justify-content:center;
@@ -126,7 +129,7 @@
             margin: auto;
             padding: 10px 20px;
             background-color: #067359;
-            color: rgb(255, 229, 229);
+            color:rgb(254, 255, 248);
             text-decoration: none;
             border-radius: 5px;
             font-size: 16px;
@@ -176,13 +179,17 @@ img {
                 <a class="download-button" style=" display: block; margin-left: auto; margin-right: auto; width: 40%;" target="_blank" href="https://louisandsonsdrywall.com/">Visit Website</a>
             </div>
         </div>
-        <div class="image">
-            <img src="images/lns/LNS_Web_Mockups.jpg" alt="Web mockup" class="zoomable">
+        <div class="masonry-item">
+            <a data-fancybox="gallery" href="images/lns/LNS_Web_Mockups.jpg">
+                <img src="images/lns/LNS_Web_Mockups.jpg" alt="LNS webmockups">
+            </a>
         </div>
     </div>
     <div class="container">
-        <div class="image">
-            <img src="images/graphicdesign/LNS_Thumbnail.jpg" alt="LNS Trifold" class="zoomable">
+        <div class="masonry-item" style="width: 40%;">
+            <a data-fancybox="gallery" href="images/graphicdesign/LNS_Thumbnail.jpg">
+                <img src="images/graphicdesign/LNS_Thumbnail.jpg" alt="LNS brochure">
+            </a>
         </div>
         <div class="text" style="padding-left:5%;">
             <h2 style="text-align: center;">Trifold</h2>
@@ -223,8 +230,13 @@ img {
             </div>
         </div>
     </footer>
+    <!-- Fancybox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script>
-        Zoom(".zoomable");
-      </script>
+        // Initialize Fancybox
+        Fancybox.bind("[data-fancybox]", {
+            // Optional: Add custom settings here
+        });
+    </script>
 </body>
 </html>
