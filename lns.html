@@ -83,6 +83,32 @@
     align-items: center;
 }
 
+/* New gallery styles */
+.newsletter-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px auto;
+    flex-wrap: wrap;
+    max-width: 80%;
+}
+
+.newsletter-gallery a {
+    flex: 1;
+    min-width: 250px;
+    max-width: 30%;
+}
+
+.newsletter-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.newsletter-gallery img:hover {
+    transform: scale(1.03);
+}
 
 @media (max-width: 768px) {
     .banner{
@@ -102,7 +128,7 @@
         width: 100%;
         padding-right: 0;
     }
-
+    
     .image {
         margin-top: 20px;
         display: flex;
@@ -126,7 +152,12 @@
     .modal-content .column {
         display: none;
     }
-
+    
+    /* Mobile gallery styles */
+    .newsletter-gallery a {
+        max-width: 100%;
+        min-width: 80%;
+    }
 }
 
 .download-button {
@@ -174,7 +205,7 @@ img {
 <div class="text-wrapper">
     <h1>Louis & Sons Drywall, Inc.</h1>
       <div class="container">
-        <div class="text">
+        <div class="text" style="padding-right:10%; padding-left:10%;">
             <h2>Website and Branding</h2>
             <br>
             <p>Starting in July 2019, I created a revised branding for Louis & Sons Drywall, Inc. This included tasks like building a new website, creating and updating social media pages, and filming/editing promotional videos. </p>
@@ -198,7 +229,7 @@ img {
                 <img src="images/graphicdesign/LNS_Thumbnail.jpg" alt="LNS brochure">
             </a>
         </div>
-        <div class="text" style="padding-left:5%;">
+        <div class="text" id="newsletter" style="padding-right:10%; padding-left:10%;">
             <h2 style="text-align: center;">Trifold</h2>
             <br>
             <p>Additionally, I made a trifold brochure in Adobe Illustrator that was given out to builders and homeowners. The brochure showcased the type of services, areas served, and the backstory behind the company.</p>
@@ -208,14 +239,58 @@ img {
                 <a class="download-button" style=" display: block; margin-left: auto; margin-right: auto; width: 40%;" target="_blank" href="images/lns/LNS_Brochure copy.pdf">View PDF</a>
             </div>
         </div>
+   
     </div>
-</div>
+          <div class="container" style="width: 50%; margin: auto;" >
+        <div class="text" >
+            <br>
+            <h2>Newsletter</h2>
+            <br>
+            <p>In March 2025, I started a monthly newsletter for the Louis & Sons Drywall, Inc. This newsletter includes project highlights, employee spotlights, industry events, tips for builders, and custom editorial cartoons.</p> 
+            <br> 
+            <p> In order to reach to the widest audience, I designed three different formats for each issue: email, social media, and web. The email base was created using Mailchimp, then I spliced in some HTML/CSS elements onto it in order to get a nice custom template. I used Adobe Illustrator to design slides for the Instagram/Facebook and Wordpress to create the web version.</p>
+            <br>
+            <div class="button-wrapper">
+                <a class="download-button" style=" display: block; margin-left: auto; margin-right: auto; width: 50%;" target="_blank" href="https://louisandsonsdrywall.com/blog-posts/">Read Web Version</a>
+            </div>
+            <br>
+        </div>
+        </div>
+        <br>
+        <h2 style="text-align: center">Sample Social Media Slides</h2>
+    <div class="newsletter-gallery">
+            <a data-fancybox="newsletter-gallery" href="images/lns/NewsLetter 3-01.jpg">
+                <img src="images/lns/NewsLetter 3-01.jpg" alt=" Louis & Sons Drywall, Inc. Newsletter Sample 1">
+            </a>
+            <a data-fancybox="newsletter-gallery" href="images/lns/NewsLetter 3-02.jpg">
+                <img src="images/lns/NewsLetter 3-02.jpg" alt="Louis & Sons Drywall, Inc. Newsletter Sample 2">
+            </a>
+            <a data-fancybox="newsletter-gallery" href="images/lns/NewsLetter 3-03.jpg">
+                <img src="images/lns/NewsLetter 3-03.jpg" alt="Louis & Sons Drywall, Inc. Newsletter Sample 3">
+            </a>
+            <a data-fancybox="newsletter-gallery" href="images/lns/NewsLetter 3-04.jpg">
+                <img src="images/lns/NewsLetter 3-04.jpg" alt="Louis & Sons Drywall, Inc. Newsletter Sample 4">
+            </a>
+        </div>        
+        <!-- Newsletter Gallery Section -->
+        <h2 style="text-align: center">Editorial Cartoons</h2>
+        <div class="newsletter-gallery">
 
+            <a data-fancybox="newsletter-gallery" href="images/lns/Cartoon1_portfolio-01-01.jpg">
+                <img src="images/lns/Cartoon1_portfolio-01-01.jpg" alt="Newsletter Sample 1">
+            </a>
+            <a data-fancybox="newsletter-gallery" href="images/lns/Cartoon2_portfolio.jpg">
+                <img src="images/lns/Cartoon2_portfolio.jpg" alt="Newsletter Sample 2">
+            </a>
+            <a data-fancybox="newsletter-gallery" href="images/lns/Cartoon4_portfolio.jpg">
+                <img src="images/lns/Cartoon4_portfolio.jpg" alt="Newsletter Sample 3">
+            </a>
+        </div>
+</div>
     <div class="process">
         <h1>Motion Graphics Sample Promotional Video</h1>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/R_KeWgC79lA?si=6uTOoMliRCVwqqJK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    
+    </div> 
     <div class="button-container">
         <a href="graphicdesign.html" class="button-link">
             <button class="responsive-button">Back to GRAPHIC DESIGN</button>
