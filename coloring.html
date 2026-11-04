@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
-    <title>Ravenna G | Costumes</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+    <title>Ravenna G | Coloring Pages</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
     h1 {
@@ -43,7 +44,14 @@
         border-bottom: 2px solid #168189;
         padding-bottom: 10px;
     }
-    
+    .center-item{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .masonry-item{
+        width:40%;
+    }
     .job {
         margin-bottom: 15px;
     }
@@ -57,7 +65,9 @@
         list-style-type: disc;
         padding-left: 20px;
     }
-    
+    a {
+        text-decoration: none;
+    }
     @media (max-width: 600px) {
         .resume-section {
             padding: 10px;
@@ -69,7 +79,7 @@
             align-items:center;
             height:40vh;
             width: 100%;
-            background:url("images/header/costume.jpg");
+            background:rgb(21, 84, 57);
             background-size:cover;
             background-position:center;
             box-shadow: 2px 2px 5px black;
@@ -136,24 +146,30 @@
         </ul>
       </header>
       <div class="banner">
-          <h1>COSTUME CATALOG</h1>
+          <h1>COLORING PAGES</h1>
       </div>
       <section class="resume-section">
         <div class="resume-content">
-            <!-- Education -->
             <div class="resume-item">
-                <p>Here is a collection of costumes I have made throughout the years. I wear these to anime conventions, zombie walks, and just for Halloween fun. All costumes featured are my own designs and were created by me from concept to final result.</p>
-
             </div>
-        <div class="button-container">
-            <a href="RavennaGemignani - Costume Catalog.pdf" class="button-link" target="_blank">
-                <button class="responsive-button">View PDF</button>
-            </a>
-        </div> 
+                <section class="resume-section">
+                <div class="button-container">
+                    <a href="LodiandParmarPDF/AppleStorytime.pdf" class="button-link" target="_blank">
+                        <button class="responsive-button">View PDF</button>
+                    </a>
+                </div> 
+                <div class="button-container">
+                    <a href="LodiandParmarPDF/Flying.pdf" class="button-link" target="_blank">
+                        <button class="responsive-button">View PDF</button>
+                    </a>
+                </div> 
+                <div class="button-container">
+                    <a href="LodiandParmarPDF/Mushroom.pdf" class="button-link" target="_blank">
+                        <button class="responsive-button">View PDF</button>
+                    </a>
+                </div>                      
+        </div>
     </section>
-            <br>
-            <br>
-            <br>
 
        <footer>
         <div class="footer-container">
@@ -170,5 +186,13 @@
             </div>
         </div>
     </footer>
+        <!-- Fancybox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+        // Initialize Fancybox
+        Fancybox.bind("[data-fancybox]", {
+            // Optional: Add custom settings here
+        });
+    </script>
 </body>
 </html>
